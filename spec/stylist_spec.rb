@@ -58,15 +58,15 @@ describe(Stylist) do
       expect(test_stylist.clients).to(eq([test_client, test_client2]))
     end
   end
-#   describe('#update') do
-#     it('lets you update stylists in the database') do
-#       stylist = Stylist.new(name: 'Najib', id: nil)
-#       stylist.save
-#       stylist.update(name: 'Osman')
-#       expect(stylist.name).to(eq('Osman'))
-#     end
-#   end
-#
+  describe('#update') do
+    it('lets you update stylists in the database') do
+      stylist = Stylist.new(name: 'Najib', id: nil)
+      stylist.save
+      stylist.update(name: 'Osman')
+      expect(stylist.name).to(eq('Osman'))
+    end
+  end
+
 #   describe('#delete') do
 #     it('lets you delete a stylist from the database') do
 #       stylist = Stylist.new(name: 'Najib', id: nil)
