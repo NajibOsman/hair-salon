@@ -39,14 +39,14 @@ describe(Stylist) do
       expect(Stylist.find(test_stylist2.id)).to(eq([test_stylist2]))
     end
   end
-#
-#   describe('#==') do
-#     it('is the same stylist is it has the same name') do
-#       stylist1 = Stylist.new(name: 'Najib', id: nil)
-#       stylist2 = Stylist.new(name: 'Najib', id: nil)
-#       expect(stylist1).to(eq(stylist2))
-#     end
-#   end
+
+  describe('#==') do
+    it('is the same stylist is it has the same name') do
+      stylist1 = Stylist.new(name: 'Najib', id: nil)
+      stylist2 = Stylist.new(name: 'Najib', id: nil)
+      expect(stylist1).to(eq(stylist2))
+    end
+  end
 #   describe('#clients') do
 #     it('returns an array of clients for that stylist') do
 #       test_stylist = Stylist.new(name: 'Najib', id: nil)
