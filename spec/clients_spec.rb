@@ -28,12 +28,12 @@ describe(Client) do
       expect(test_client.stylist_id).to(eq(1))
     end
   end
-#
-#   describe('#==') do
-#     it('is the same client if it has the same name and stylist ID') do
-#       client1 = Client.new(name: 'Taxny', stylist_id: 1)
-#       client2 = Client.new(name: 'Taxny', stylist_id: 1)
-#       expect(client1).to(eq(client2))
-#     end
-#   end
-# end
+
+  describe('#==') do
+    it('is the same client if it has the same name and stylist ID') do
+      client1 = Client.new(name: 'Taxny', stylist_id: 1)
+      client2 = Client.new(name: 'Taxny', stylist_id: 1)
+      expect(client1).to(eq(client2))
+    end
+  end
+end
