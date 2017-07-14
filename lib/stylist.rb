@@ -33,4 +33,28 @@ class Stylist
   define_method(:==) do |another_stylist|
     name.==(another_stylist.name).&(id.==(another_stylist.id))
   end
+
+  define_method(:clients) do
+    stylist_clients = []
+    clients = DB.exec("SELECT * FROM clients WHERE stylist_id = #{id};")
+    clients.each do |client|
+      name = clients.fetch('name')
+      stylist_id = client.fetch('stylist_id').to_i
+      stylist_clients.push(Clients.new(name: name, stylist_id: stylist_id))
+    end
+    stylist_clients
+  end
+
+  define_method(:update) do |attributes|
+    @name = attributes.fetch(:name)
+    @id = id
+    DB.exec("UPDATE stylists SET name = '#{@name}' WHERE id = #{@id};")
+  end
+
+  define_method(:delete) do
+    DB.exec("DELETE FROM stylists WHERE id = #{id};")
+    DB.exec("DELETE FROM clients WHERE stylist_id = #{id};")
+  end
+
+
 end
