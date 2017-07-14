@@ -21,24 +21,24 @@ describe(Stylist) do
       expect(stylist.id).to(be_an_instance_of(Fixnum))
     end
   end
-#
-#   describe('#save') do
-#     it('lets you save stylist to the database') do
-#       stylist = Stylist.new(name: 'Najib', id: nil)
-#       stylist.save
-#       expect(Stylist.all).to(eq([stylist]))
-#     end
-#   end
-#
-#   describe('.find') do
-#     it('returns a stylist by its ID') do
-#       test_stylist = Stylist.new(name: 'Najib', id: nil)
-#       test_stylist.save
-#       test_stylist2 = Stylist.new(name: 'Osman', id: nil)
-#       test_stylist2.save
-#       expect(Stylist.find(test_stylist2.id)).to(eq([test_stylist2]))
-#     end
-#   end
+
+  describe('#save') do
+    it('lets you save stylist to the database') do
+      stylist = Stylist.new(name: 'Najib', id: nil)
+      stylist.save
+      expect(Stylist.all).to(eq([stylist]))
+    end
+  end
+
+  describe('.find') do
+    it('returns a stylist by its ID') do
+      test_stylist = Stylist.new(name: 'Najib', id: nil)
+      test_stylist.save
+      test_stylist2 = Stylist.new(name: 'Osman', id: nil)
+      test_stylist2.save
+      expect(Stylist.find(test_stylist2.id)).to(eq([test_stylist2]))
+    end
+  end
 #
 #   describe('#==') do
 #     it('is the same stylist is it has the same name') do
