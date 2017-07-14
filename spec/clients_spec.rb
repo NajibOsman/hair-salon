@@ -15,12 +15,12 @@ describe(Client) do
     end
   end
 
-#   describe('#name') do
-#     it('lets you read the name out') do
-#       test_client = Client.new(name: 'Taxny', stylist_id: 1)
-#       expect(test_client.name).to(eq('Taxny'))
-#     end
-#   end
+  describe('#name') do
+    it('lets you read the name out') do
+      test_client = Client.new(name: 'Taxny', stylist_id: 1)
+      expect(test_client.name).to(eq('Taxny'))
+    end
+  end
 #
 #   describe('#stylist_id') do
 #     it('lets you read the stylist ID out') do
