@@ -30,7 +30,7 @@ class Stylist
     found_stylist
   end
 
-#   define_method(:==) do |another_stylist|
-#     name.==(another_stylist.name).&(id.==(another_stylist.id))
-#   end
-# end
+  define_method(:==) do |another_stylist|
+    name.==(another_stylist.name).&(id.==(another_stylist.id))
+  end
+end
