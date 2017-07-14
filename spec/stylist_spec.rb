@@ -77,12 +77,12 @@ describe(Stylist) do
       expect(Stylist.all).to(eq([stylist2]))
     end
 
-    it("deletes a stylist's tasks from the database") do
+    it("deletes a stylist's clients from the database") do
       stylist = Stylist.new(name: 'Najib', id: nil)
       stylist.save
-      client = Client.new(description: 'learn SQL', stylist_id: stylist.id)
+      client = Client.new(name: 'Osman', stylist_id: stylist.id)
       client.save
-      client2 = Client.new(description: 'Review Ruby', stylist_id: stylist.id)
+      client2 = Client.new(name: 'Taxny', stylist_id: stylist.id)
       client2.save
       stylist.delete
       expect(Client.all).to(eq([]))
