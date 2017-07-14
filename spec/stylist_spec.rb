@@ -47,17 +47,17 @@ describe(Stylist) do
       expect(stylist1).to(eq(stylist2))
     end
   end
-#   describe('#clients') do
-#     it('returns an array of clients for that stylist') do
-#       test_stylist = Stylist.new(name: 'Najib', id: nil)
-#       test_stylist.save
-#       test_client = Client.new(description: 'Learn SQL', list_id: test_list.id)
-#       test_client.save
-#       test_client2 = Client.new(description: 'Review Ruby', list_id: test_list.id)
-#       test_client2.save
-#       expect(test_stylist.clients).to(eq([test_client, test_client2]))
-#     end
-#   end
+  describe('#clients') do
+    it('returns an array of clients for that stylist') do
+      test_stylist = Stylist.new(name: 'Najib', id: nil)
+      test_stylist.save
+      test_client = Client.new(description: 'Learn SQL', list_id: test_list.id)
+      test_client.save
+      test_client2 = Client.new(description: 'Review Ruby', list_id: test_list.id)
+      test_client2.save
+      expect(test_stylist.clients).to(eq([test_client, test_client2]))
+    end
+  end
 #   describe('#update') do
 #     it('lets you update stylists in the database') do
 #       stylist = Stylist.new(name: 'Najib', id: nil)
