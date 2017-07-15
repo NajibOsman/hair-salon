@@ -14,7 +14,7 @@
   <form action="/clients" method="post">
     <label for="stylist_id">Select a stylist</label>
     <select id='stylist_id' name='stylist_id' type='text' class="browser-default">
-      <% @stylist.each() do |stylist| %>
+      <% @stylists.each() do |stylist| %>
         <option value="<%= stylist.id()%>"> <%= stylist.name() %> </option>
       <% end %>
     </select>
@@ -28,7 +28,7 @@
 
 
 
-  <% if @stylist.any?() %>
+  <% if @stylists.any?() %>
   <p>Click on a stylist to see his/her clients:</p>
 
   <ul>
