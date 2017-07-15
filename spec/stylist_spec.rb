@@ -34,7 +34,7 @@ describe(Stylist) do
     it('returns a stylist by its ID') do
       test_stylist = Stylist.new(name: 'Najib', id: nil)
       test_stylist.save
-      test_stylist2 = Stylist.new(name: 'Osman', id: nil)
+      test_stylist2 = Stylist.new(name: "Osman", id: nil)
       test_stylist2.save
       expect(Stylist.find(test_stylist2.id)).to(eq([test_stylist2]))
     end
@@ -55,7 +55,7 @@ describe(Stylist) do
       test_client.save
       test_client2 = Client.new(name: 'Taxny', stylist_id: test_stylist.id)
       test_client2.save
-      expect(test_stylist.client).to(eq([test_client, test_client2]))
+      expect(test_stylist.clients).to(eq([test_client, test_client2]))
     end
   end
   describe('#update') do
