@@ -1,0 +1,17 @@
+<h1>Your Current Stylists</h1>
+
+  <% if @stylists.any?() %>
+<!-- This part will only be rendered if any lists are included -->
+    <h3>Here are your stylists:</h3>
+
+    <ul>
+      <% @stylists.each() do |stylist| %>
+        <li><a href="/stylists/<%= stylist.id()%>"><%= stylist.name() %></a> </li>
+      <% end %>
+    </ul>
+
+  <% else %>
+<!-- if no lists are included, this text will show -->
+      <p>There are no stylists yet!</p>
+
+  <% end %>
