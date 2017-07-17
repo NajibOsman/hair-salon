@@ -36,7 +36,7 @@ describe(Stylist) do
       test_stylist.save
       test_stylist2 = Stylist.new(name: "Osman", id: nil)
       test_stylist2.save
-      expect(Stylist.find(test_stylist2.id)).to(eq([test_stylist2]))
+      expect(Stylist.find(test_stylist2.id)).to(eq(test_stylist2))
     end
   end
 
