@@ -6,11 +6,12 @@
     <label for="name">Rename your stylist:</label>
     <input id="name" name="name" type="text">
 
-    <button type="submit">Update</button>
+     <button class="btn-floating btn-large waves-effect waves-light #009688 teal" type="submit"><i class="material-icons">update</i></button>
   </form>
 
   <form action="/stylists/<%= @stylist.id() %>" method="post">
    <input name="_method" type="hidden" value="delete">
 
-   <button type="submit">Delete a stylist</button>
+        <button class="btn-floating btn-large waves-effect waves-light #009688 teal" type="submit"><i class="material-icons">delete</i></button>
+
  </form>
