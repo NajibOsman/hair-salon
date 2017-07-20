@@ -1,3 +1,8 @@
+body{
+	background-color: #cccccc;
+	background-image: url("images/bg.jpg");
+}
+
 .delete button{
 	display: inline-block;
 }
