@@ -14,7 +14,8 @@ get('/') do
 end
 
 get('/stylists/new') do
-  erb(:stylist_form)
+  @stylists = Stylist.all
+  erb(:index)
 end
 # to display the list form
 
